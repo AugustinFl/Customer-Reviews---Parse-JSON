@@ -1,0 +1,87 @@
+* {box-sizing: border-box;}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+.cr_main {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-around;
+}
+article {
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	padding: 20px;
+	border: 1px solid #999;
+}
+article h3 {
+	font-size: 1.2rem;
+}
+article section {
+	flex-grow: 2;
+	font-size: 0.9rem;
+	text-align: justify;
+}
+article footer {
+	font-size: 0.8rem;
+}
+/* Stars in css & UTF-8 symbols - can be replaced with font glyphs to be more safer but extra resource loaded */
+
+.stars-css {
+	position: relative;
+	width: 83px;
+	height: 20px;
+}
+.stars-colored {
+	color: green;
+	position: absolute;
+	height: 20px;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	overflow: hidden;
+}
+.stars-empty {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+/* Stars using sprites - classic way */
+
+/* Slide previous & next */
+
+.cr_slide {
+	position: relative;
+}
+.cr_slide_previous, .cr_slide_next {
+	position: relative;
+}
+.cr_slide_previous:before, .cr_slide_next:before {
+	content: "\00ab";
+	font-size: 40px;
+	cursor: pointer;
+}
+.cr_slide_next:before {
+	content: "\00bb";
+}
+/* Pagination */
+
+.pagination {
+	display: flex;
+	justify-content: center;
+}
+.pagination a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+	background-color: #999;
+}
+.pagination a:hover {
+	background-color: lightgreen;
+}
+.pagination .active {
+	background-color: green;
+}
